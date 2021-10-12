@@ -28,6 +28,11 @@ public class PageResultDTO<T extends Serializable> implements Serializable {
     private Long total;
 
     /**
+     * 总页数
+     */
+    private Long totalPage;
+
+    /**
      * data list
      */
     private List<T> records;
