@@ -76,6 +76,9 @@ public class Sequence {
 
     /**
      * 获取 maxWorkerId
+     * @param datacenterId  datta center id
+     * @param maxWorkerId   max worker id
+     * @return maxWorkerId
      */
     protected static long getMaxWorkerId(long datacenterId, long maxWorkerId) {
         StringBuilder mpid = new StringBuilder();
@@ -95,6 +98,8 @@ public class Sequence {
 
     /**
      * 数据标识id部分
+     * @param maxDatacenterId max data center id
+     * @return dataCenterId
      */
     protected static long getDatacenterId(long maxDatacenterId) {
         long id = 0L;

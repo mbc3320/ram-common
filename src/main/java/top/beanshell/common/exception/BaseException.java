@@ -17,7 +17,7 @@ public class BaseException extends RuntimeException {
 
     /**
      * all biz exception must throw a code.
-     * @param status
+     * @param status custom status code
      */
     public BaseException(EnumCode status) {
         this.status = status;
@@ -25,8 +25,8 @@ public class BaseException extends RuntimeException {
 
     /**
      * whether the code can't desc the error, just desc by ext message.
-     * @param status
-     * @param message
+     * @param status  custom status code
+     * @param message custom message
      */
     public BaseException(EnumCode status, String message) {
         super(message);

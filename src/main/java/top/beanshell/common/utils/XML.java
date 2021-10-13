@@ -18,8 +18,8 @@ public final class XML {
 
     /**
      * pojo to xml
-     * @param data
-     * @return
+     * @param data pojo instance
+     * @return xml string
      */
     public static String toXML(Object data) {
         if (objectMapper == null) {
@@ -35,10 +35,10 @@ public final class XML {
 
     /**
      * xml to pojo
-     * @param data
-     * @param cls
-     * @param <T>
-     * @return
+     * @param data xml string
+     * @param cls bean class
+     * @param <T> bean class
+     * @return bean
      */
     public static <T> T toBean(String data, Class<T> cls) {
         if (objectMapper == null) {

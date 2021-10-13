@@ -35,7 +35,7 @@ public final class IdUtil {
 
     /**
      * 获取唯一ID
-     *
+     * @param entity factor
      * @return id
      */
     public static long getId(Object entity) {
@@ -53,7 +53,7 @@ public final class IdUtil {
 
     /**
      * 获取唯一ID
-     *
+     * @param entity  factor
      * @return id
      */
     public static String getIdStr(Object entity) {
@@ -62,6 +62,7 @@ public final class IdUtil {
 
     /**
      * 格式化的毫秒时间
+     * @return millisecond
      */
     public static String getMillisecond() {
         return LocalDateTime.now().format(MILLISECOND);
@@ -70,6 +71,7 @@ public final class IdUtil {
     /**
      * 时间 ID = Time + ID
      * <p>例如：可用于商品订单 ID</p>
+     * @return time id
      */
     public static String getTimeId() {
         return getMillisecond() + getIdStr();
@@ -97,6 +99,7 @@ public final class IdUtil {
 
     /**
      * 使用ThreadLocalRandom获取UUID获取更优的效果 去掉"-"
+     * @return uuid without -
      */
     public static String get32UUID() {
         ThreadLocalRandom random = ThreadLocalRandom.current();

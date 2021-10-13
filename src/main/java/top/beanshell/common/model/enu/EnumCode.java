@@ -12,14 +12,14 @@ public interface EnumCode extends Serializable {
 
     /**
      * enum code
-     * @return
+     * @return enum code
      */
     @JsonValue
     Integer getCode();
 
     /**
      * enum value
-     * @return
+     * @return enum desc
      */
     String getText();
 }

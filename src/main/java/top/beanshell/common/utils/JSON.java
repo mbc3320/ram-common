@@ -22,6 +22,11 @@ public final class JSON {
 
     private static ObjectMapper objectMapper;
 
+    /**
+     * config objectMapper
+     * @param config  config data
+     * @return        JSON instance
+     */
     public static JSON config(ObjectMapper config) {
         if (null != config) {
             objectMapper = config;
@@ -31,8 +36,8 @@ public final class JSON {
 
     /**
      * pojo to json string
-     * @param obj
-     * @return
+     * @param obj  bean instance
+     * @return     json string
      */
     public static String toJSONString(Object obj) {
         if (objectMapper == null) {
@@ -49,10 +54,10 @@ public final class JSON {
     /**
      * json string to pojo
      * ignore unknown property
-     * @param jsonString
-     * @param valueType
-     * @param <T>
-     * @return
+     * @param jsonString  json string data
+     * @param valueType   bean class
+     * @param <T>         bean class
+     * @return            bean instance with data
      */
     public static <T> T parse(String jsonString, Class<T> valueType) {
         if (objectMapper == null) {
@@ -69,10 +74,10 @@ public final class JSON {
 
     /**
      * json string to pojo
-     * @param byteData
-     * @param valueType
-     * @param <T>
-     * @return
+     * @param byteData  json string byte array data
+     * @param valueType bean class
+     * @param <T>       bean class
+     * @return          bean instance with data
      */
     public static <T> T parse(byte[] byteData, Class<T> valueType) {
         if (objectMapper == null) {
@@ -89,10 +94,10 @@ public final class JSON {
 
     /**
      * json array to pojo list
-     * @param jsonString
-     * @param valueType
-     * @param <T>
-     * @return
+     * @param jsonString json data string
+     * @param valueType  bean class
+     * @param <T>        bean class
+     * @return data list
      */
     public static <T> List<T> parseArray(String jsonString, Class<T> valueType) {
         if (objectMapper == null) {

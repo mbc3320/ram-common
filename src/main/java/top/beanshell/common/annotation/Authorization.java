@@ -19,13 +19,13 @@ public @interface Authorization {
     /**
      * permission code
      *  ex: api_admin_user_save
-     * @return
+     * @return api permissionCode
      */
     String value() default "";
 
     /**
      * whether the validation
-     * @return
+     * @return whether the validation
      */
     boolean valid() default true;
 }
